@@ -34,6 +34,8 @@ ENV NODE_OPTIONS --enable-source-maps
 ENV HOST 0.0.0.0
 ENV PORT 80
 
+ENV AUTH_HOST 'auth.example.com'
+
 EXPOSE 80
 
 # Copy all deps from last stage

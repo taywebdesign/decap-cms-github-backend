@@ -12,14 +12,13 @@ if (clientSecret == undefined) {
 }
 
 export const config = {
+  host: process.env.AUTH_HOST,
   client: {
-    // host: 'https://auth.demo-restaurant.tayruhui.com',
     id: clientId as string,
     secret: clientSecret as string,
   },
   scope: scope || 'repo',
   auth: {
-    // host: 'https://auth.demo-restaurant.tayruhui.com',
     tokenHost: 'https://github.com',
     tokenPath: '/login/oauth/access_token',
     authorizePath: '/login/oauth/authorize',
