@@ -3,7 +3,7 @@ import {config, logger} from '../config.js';
 import {nanoServer} from '../lib/nano-server.js'
 
 nanoServer.route('GET', '/callback', async (connection) => {
-  const host = connection.incomingMessage.headers.host;
+  const host = 'auth.demo-restaurant.tayruhui.com';//connection.incomingMessage.headers.host;
   const url = new URL(`https://${host}/${connection.url}`);
   const provider = url.searchParams.get('provider');
   const code = url.searchParams.get('code');

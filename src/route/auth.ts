@@ -6,7 +6,7 @@ import {config, logger} from '../config.js';
 export const randomString = () => randomBytes(4).toString('hex');
 
 nanoServer.route('GET', '/auth', (connection) => {
-  const host = connection.incomingMessage.headers.host;
+  const host = 'auth.demo-restaurant.tayruhui.com'; //connection.incomingMessage.headers.host;
   const url = new URL(`https://${host}/${connection.url}`);
   const provider = url.searchParams.get('provider');
   logger.logMethodArgs?.('get-auth', {host, url, provider})
